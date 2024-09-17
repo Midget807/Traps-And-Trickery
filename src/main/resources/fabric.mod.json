@@ -3,13 +3,14 @@
 	"id": "trapsntrickery",
 	"version": "${version}",
 	"name": "Traps and Trickery",
-	"description": "This is an example description! Tell everyone what your mod is about!",
+	"description": "A little bit of tomfoolery...",
 	"authors": [
-		"Me!"
+		"Midget807"
 	],
 	"contact": {
-		"homepage": "https://fabricmc.net/",
-		"sources": "https://github.com/FabricMC/fabric-example-mod"
+		"homepage": "https://github.com/Midget807/Traps-And-Trickery",
+		"sources": "https://github.com/Midget807/Traps-And-Trickery/branches",
+		"issues": "https://github.com/Midget807/Traps-And-Trickery/issues"
 	},
 	"license": "MIT",
 	"icon": "assets/trapsntrickery/icon.png",
