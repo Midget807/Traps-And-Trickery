@@ -14,6 +14,7 @@ public class ModModelProvider extends FabricModelProvider {
 
     @Override
     public void generateBlockStateModels(BlockStateModelGenerator blockStateModelGenerator) {
+        blockStateModelGenerator.registerRotatable(ModBlocks.CRACKED_GLASS); // TODO: 24/10/2024 fix for all direction 
     }
 
     @Override

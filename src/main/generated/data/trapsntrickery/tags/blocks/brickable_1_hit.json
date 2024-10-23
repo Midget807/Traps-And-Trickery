@@ -19,6 +19,24 @@
     "minecraft:brown_stained_glass_pane",
     "minecraft:green_stained_glass_pane",
     "minecraft:red_stained_glass_pane",
-    "minecraft:black_stained_glass_pane"
+    "minecraft:black_stained_glass_pane",
+    "trapsntrickery:cracked_glass",
+    "trapsntrickery:cracked_packed_ice",
+    "trapsntrickery:white_stained_cracked_glass",
+    "trapsntrickery:orange_stained_cracked_glass",
+    "trapsntrickery:magenta_stained_cracked_glass",
+    "trapsntrickery:light_blue_stained_cracked_glass",
+    "trapsntrickery:yellow_stained_cracked_glass",
+    "trapsntrickery:lime_stained_cracked_glass",
+    "trapsntrickery:pink_stained_cracked_glass",
+    "trapsntrickery:gray_stained_cracked_glass",
+    "trapsntrickery:light_gray_stained_cracked_glass",
+    "trapsntrickery:cyan_stained_cracked_glass",
+    "trapsntrickery:purple_stained_cracked_glass",
+    "trapsntrickery:blue_stained_cracked_glass",
+    "trapsntrickery:brown_stained_cracked_glass",
+    "trapsntrickery:green_stained_cracked_glass",
+    "trapsntrickery:red_stained_cracked_glass",
+    "trapsntrickery:black_stained_cracked_glass"
   ]
 }

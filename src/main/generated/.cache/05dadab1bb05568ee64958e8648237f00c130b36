@@ -1,1 +1,4 @@
-// 1.20.2	2024-10-23T23:31:03.8452833	Traps and Trickery/Model Definitions
+// 1.20.2	2024-10-24T00:50:07.8788758	Traps and Trickery/Model Definitions
+fd735fe587bc65a92d8f15049f4be4ffd498ffca assets\trapsntrickery\blockstates\cracked_glass.json
+a2ec6feac7f63ad226213d337a1772141afb296d assets\trapsntrickery\models\block\cracked_glass.json
+82beb9673c13296fdbee7b83360ce71933992595 assets\trapsntrickery\models\item\cracked_glass.json
