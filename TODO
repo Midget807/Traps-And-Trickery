@@ -1,0 +1,11 @@
+//TODO add nether brick variant that leaves cinder powder -> if in hot biomes then become fire after 30 sec
+//TODO add broken glass (full block width, half block high)
+//TODO make egg projectile spawn egg splatter (like seamoon)
+//TODO egg splatter lasts a minute -> if more eggs appear reset timer (when splatter is placed check for nearby existing splatter and reset their timer -> avoids multi-ticking)
+//TODO egg particle and/or connected textures for splatter???
+//TODO moss/grass/leaf/mud/sand carpet trap
+//TODO sand carpet trap is made from both wet and normal sand -> wet sand is made like mud -> has no gravity by will become normal sand after 30 seconds if not in cold biomes
+//TODO slingshot that shoots baby slimes and shows slimy overlay -> must splash water bottle or have head in water to remove -> magmacube adds fire damage for annoyance
+//TODO remove the red from trapped chests -> make them detonate tnt instantly
+//TODO add a Revealing Lens to spy glasses that allow players to identify trapped chest -> or just add magnifying glass if too hard
+//TODO add Speaker block that plays sound files on redstone activated

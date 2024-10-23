@@ -3,6 +3,7 @@ package net.midget807.trapsntrickery;
 import net.fabricmc.api.ModInitializer;
 
 import net.midget807.trapsntrickery.block.ModBlocks;
+import net.midget807.trapsntrickery.entity.ModEntities;
 import net.midget807.trapsntrickery.item.ModItems;
 import net.minecraft.util.Identifier;
 import org.slf4j.Logger;
@@ -20,5 +21,6 @@ public class TrapsAndTrickeryMain implements ModInitializer {
 		LOGGER.info("wassup");
 		ModItems.registerModItems();
 		ModBlocks.registerModBlocks();
+		ModEntities.registerModEntities();
 	}
 }

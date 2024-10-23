@@ -19,14 +19,13 @@ import net.minecraft.world.World;
 import net.minecraft.world.WorldAccess;
 import net.minecraft.world.WorldView;
 
-public class SpikeTrapBlock extends PillarBlock implements LandingBlock, Waterloggable {
+public class SpikeTrapBlock extends Block implements LandingBlock, Waterloggable {
     public static final IntProperty EFFECT_USES = IntProperty.of("effect_uses", 0, 8);
-    public static final DirectionProperty FACING = Properties.FACING;
     public static final BooleanProperty WATERLOGGED = Properties.WATERLOGGED;
-    private static final VoxelShape SHAPE = Block.createCuboidShape(1, 0, 1, 15, 16, 15);
+    private static final VoxelShape SHAPE = Block.createCuboidShape(0, 0, 0, 16, 1, 16);
     public SpikeTrapBlock(Settings settings) {
         super(settings);
-        this.setDefaultState(this.stateManager.getDefaultState().with(WATERLOGGED, false).with(EFFECT_USES, 0).with(FACING, Direction.UP));
+        this.setDefaultState(this.stateManager.getDefaultState().with(WATERLOGGED, false).with(EFFECT_USES, 0));
     }
 
     @Override
@@ -34,23 +33,22 @@ public class SpikeTrapBlock extends PillarBlock implements LandingBlock, Waterlo
         builder.add(WATERLOGGED, EFFECT_USES);
     }
 
-    @Override
-    public boolean canPlaceAt(BlockState state, WorldView world, BlockPos pos) {
-        Direction direction = state.get(FACING);
-        BlockPos blockPos = pos.offset(direction.getOpposite());
-        return world.getBlockState(blockPos).isSideSolidFullSquare(world, blockPos, direction);
-    }
 
     @Override
     public void onEntityCollision(BlockState state, World world, BlockPos pos, Entity entity) {
         if (entity instanceof LivingEntity) {
-            entity.slowMovement(state, new Vec3d(0.8f, 0.75f, 0.8f));
-            if (!world.isClient && (entity.lastRenderX != entity.getX() || entity.lastRenderZ != entity.getZ())) {
-                double d = Math.abs(entity.getX() - entity.lastRenderX);
-                double e = Math.abs(entity.getZ() - entity.lastRenderZ);
-                if (d >= 0.003F || e >= 0.003F) {
-                    entity.damage(world.getDamageSources().cactus(), 2.5f);
-                    // TODO: 13/10/2024 add effect applier
+            entity.slowMovement(state, new Vec3d(0.8f, 1.0f, 0.8f));
+            if (!world.isClient) {
+                if (entity.lastRenderX != entity.getX() || entity.lastRenderZ != entity.getZ()) {
+                    double d = Math.abs(entity.getX() - entity.lastRenderX);
+                    double e = Math.abs(entity.getZ() - entity.lastRenderZ);
+                    if (d >= 0.003F || e >= 0.003F) {
+                        entity.damage(world.getDamageSources().cactus(), 3.0f);
+                        // TODO: 13/10/2024 add effect applier
+                    }
+                }
+                if (entity.fallDistance >= 0.8 && state.get(WATERLOGGED) /* todo && if vertical*/) {
+                    entity.handleFallDamage(entity.fallDistance + 2.0f, 1.5f, world.getDamageSources().stalagmite());
                 }
             }
         }
@@ -60,7 +58,7 @@ public class SpikeTrapBlock extends PillarBlock implements LandingBlock, Waterlo
     public BlockState getPlacementState(ItemPlacementContext ctx) {
         WorldAccess worldAccess = ctx.getWorld();
         BlockPos blockPos = ctx.getBlockPos();
-        return this.getDefaultState().with(WATERLOGGED, Boolean.valueOf(worldAccess.getFluidState(blockPos).getFluid() == Fluids.WATER)).with(FACING, ctx.getSide());
+        return this.getDefaultState().with(WATERLOGGED, Boolean.valueOf(worldAccess.getFluidState(blockPos).getFluid() == Fluids.WATER));
     }
 
     @Override
