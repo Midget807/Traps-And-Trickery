@@ -1,0 +1,30 @@
+{
+  "variants": {
+    "facing=down": {
+      "model": "trapsntrickery:block/cracked_glass",
+      "x": 180
+    },
+    "facing=east": {
+      "model": "trapsntrickery:block/cracked_glass",
+      "x": 90,
+      "y": 90
+    },
+    "facing=north": {
+      "model": "trapsntrickery:block/cracked_glass",
+      "x": 90
+    },
+    "facing=south": {
+      "model": "trapsntrickery:block/cracked_glass",
+      "x": 90,
+      "y": 180
+    },
+    "facing=up": {
+      "model": "trapsntrickery:block/cracked_glass"
+    },
+    "facing=west": {
+      "model": "trapsntrickery:block/cracked_glass",
+      "x": 90,
+      "y": 270
+    }
+  }
+}
