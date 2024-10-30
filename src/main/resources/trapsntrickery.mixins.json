@@ -3,7 +3,9 @@
   "package": "net.midget807.trapsntrickery.mixin",
   "compatibilityLevel": "JAVA_17",
   "mixins": [
+    "ItemEntityMixin",
     "ItemMixin",
+    "SlimeEntityMixin",
     "SpyglassItemMixin"
   ],
   "injectors": {

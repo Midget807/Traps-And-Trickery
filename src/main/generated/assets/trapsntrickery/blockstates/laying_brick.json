@@ -1,0 +1,124 @@
+{
+  "variants": {
+    "bricks=1,facing=east,waterlogged=false": {
+      "model": "trapsntrickery:block/template_laying_brick_0_r0",
+      "uvlock": true,
+      "y": 0
+    },
+    "bricks=1,facing=east,waterlogged=true": {
+      "model": "trapsntrickery:block/template_laying_brick_0_r0",
+      "uvlock": true,
+      "y": 0
+    },
+    "bricks=1,facing=north,waterlogged=false": {
+      "model": "trapsntrickery:block/template_laying_brick_0_r0",
+      "uvlock": true,
+      "y": 270
+    },
+    "bricks=1,facing=north,waterlogged=true": {
+      "model": "trapsntrickery:block/template_laying_brick_0_r0",
+      "uvlock": true,
+      "y": 270
+    },
+    "bricks=1,facing=south,waterlogged=false": {
+      "model": "trapsntrickery:block/template_laying_brick_0_r0",
+      "uvlock": true,
+      "y": 90
+    },
+    "bricks=1,facing=south,waterlogged=true": {
+      "model": "trapsntrickery:block/template_laying_brick_0_r0",
+      "uvlock": true,
+      "y": 90
+    },
+    "bricks=1,facing=west,waterlogged=false": {
+      "model": "trapsntrickery:block/template_laying_brick_0_r0",
+      "uvlock": true,
+      "y": 180
+    },
+    "bricks=1,facing=west,waterlogged=true": {
+      "model": "trapsntrickery:block/template_laying_brick_0_r0",
+      "uvlock": true,
+      "y": 180
+    },
+    "bricks=2,facing=east,waterlogged=false": {
+      "model": "trapsntrickery:block/template_laying_brick_0_r0",
+      "uvlock": true,
+      "y": 0
+    },
+    "bricks=2,facing=east,waterlogged=true": {
+      "model": "trapsntrickery:block/template_laying_brick_0_r0",
+      "uvlock": true,
+      "y": 0
+    },
+    "bricks=2,facing=north,waterlogged=false": {
+      "model": "trapsntrickery:block/template_laying_brick_0_r0",
+      "uvlock": true,
+      "y": 270
+    },
+    "bricks=2,facing=north,waterlogged=true": {
+      "model": "trapsntrickery:block/template_laying_brick_0_r0",
+      "uvlock": true,
+      "y": 270
+    },
+    "bricks=2,facing=south,waterlogged=false": {
+      "model": "trapsntrickery:block/template_laying_brick_0_r0",
+      "uvlock": true,
+      "y": 90
+    },
+    "bricks=2,facing=south,waterlogged=true": {
+      "model": "trapsntrickery:block/template_laying_brick_0_r0",
+      "uvlock": true,
+      "y": 90
+    },
+    "bricks=2,facing=west,waterlogged=false": {
+      "model": "trapsntrickery:block/template_laying_brick_0_r0",
+      "uvlock": true,
+      "y": 180
+    },
+    "bricks=2,facing=west,waterlogged=true": {
+      "model": "trapsntrickery:block/template_laying_brick_0_r0",
+      "uvlock": true,
+      "y": 180
+    },
+    "bricks=3,facing=east,waterlogged=false": {
+      "model": "trapsntrickery:block/template_laying_brick_0_r0",
+      "uvlock": true,
+      "y": 0
+    },
+    "bricks=3,facing=east,waterlogged=true": {
+      "model": "trapsntrickery:block/template_laying_brick_0_r0",
+      "uvlock": true,
+      "y": 0
+    },
+    "bricks=3,facing=north,waterlogged=false": {
+      "model": "trapsntrickery:block/template_laying_brick_0_r0",
+      "uvlock": true,
+      "y": 270
+    },
+    "bricks=3,facing=north,waterlogged=true": {
+      "model": "trapsntrickery:block/template_laying_brick_0_r0",
+      "uvlock": true,
+      "y": 270
+    },
+    "bricks=3,facing=south,waterlogged=false": {
+      "model": "trapsntrickery:block/template_laying_brick_0_r0",
+      "uvlock": true,
+      "y": 90
+    },
+    "bricks=3,facing=south,waterlogged=true": {
+      "model": "trapsntrickery:block/template_laying_brick_0_r0",
+      "uvlock": true,
+      "y": 90
+    },
+    "bricks=3,facing=west,waterlogged=false": {
+      "model": "trapsntrickery:block/template_laying_brick_0_r0",
+      "uvlock": true,
+      "y": 180
+    },
+    "bricks=3,facing=west,waterlogged=true": {
+      "model": "trapsntrickery:block/template_laying_brick_0_r0",
+      "uvlock": true,
+      "y": 180
+    }
+  }
+}

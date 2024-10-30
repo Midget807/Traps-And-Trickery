@@ -7,5 +7,4 @@
 //TODO sand carpet trap is made from both wet and normal sand -> wet sand is made like mud -> has no gravity by will become normal sand after 30 seconds if not in cold biomes
 //TODO slingshot that shoots baby slimes and shows slimy overlay -> must splash water bottle or have head in water to remove -> magmacube adds fire damage for annoyance
 //TODO remove the red from trapped chests -> make them detonate tnt instantly
-//TODO add a Revealing Lens to spy glasses that allow players to identify trapped chest -> or just add magnifying glass if too hard
-//TODO add Speaker block that plays sound files on redstone activated
+//TODO spike trap

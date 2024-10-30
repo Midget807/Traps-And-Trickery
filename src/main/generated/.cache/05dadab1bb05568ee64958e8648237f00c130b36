@@ -1,3 +1,8 @@
-// 1.20.2	2024-10-26T02:44:53.0619559	Traps and Trickery/Model Definitions
+// 1.20.2	2024-10-30T22:32:47.5857354	Traps and Trickery/Model Definitions
+4c02e601f7a8d2f86276b3ff5721f336cd3215ca assets\minecraft\models\item\brick.json
 a60734a27e80e2600690e9d89e5dbb51251182de assets\trapsntrickery\blockstates\cracked_glass.json
+0106b39bda40106b5becf8e21eb75e0554239a53 assets\trapsntrickery\blockstates\laying_brick.json
+5b85bae8a216d3576b754b9681b99258b749ecaf assets\trapsntrickery\models\item\laying_brick.json
+9d3654f06e87a7a2f57e87fc0f955ff75f225dcd assets\trapsntrickery\models\item\lens_reveal.json
 82beb9673c13296fdbee7b83360ce71933992595 assets\trapsntrickery\models\item\cracked_glass.json
+02eb3fbe1cd2ae8778caeb2b6233e8b605dab322 assets\trapsntrickery\models\item\slingshot.json

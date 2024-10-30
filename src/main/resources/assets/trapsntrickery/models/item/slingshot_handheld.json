@@ -1,0 +1,54 @@
+{
+  "parent": "trapsntrickery:item/template_slingshot",
+  "textures": {
+    "layer0": "trapsntrickery:item/template_slingshot"
+  },
+  "overrides": [
+    {
+      "predicate" : {
+        "slingshot_pulling": 1,
+        "has_magma_cube": 1
+      },
+      "model": "trapsntrickery:item/slingshot_pulling_0_m"
+    },
+    {
+      "predicate" : {
+        "slingshot_pulling": 1,
+        "has_magma_cube": 1,
+        "slingshot_pull": 0.65
+      },
+      "model": "trapsntrickery:item/slingshot_pulling_1_m"
+    },
+    {
+      "predicate" : {
+        "slingshot_pulling": 1,
+        "has_magma_cube": 1,
+        "slingshot_pull": 0.9
+      },
+      "model": "trapsntrickery:item/slingshot_pulling_2_m"
+    },
+    {
+      "predicate" : {
+        "slingshot_pulling": 1,
+        "has_magma_cube": 0
+      },
+      "model": "trapsntrickery:item/slingshot_pulling_0"
+    },
+    {
+      "predicate" : {
+        "slingshot_pulling": 1,
+        "has_magma_cube": 0,
+        "slingshot_pull": 0.65
+      },
+      "model": "trapsntrickery:item/slingshot_pulling_1"
+    },
+    {
+      "predicate" : {
+        "slingshot_pulling": 1,
+        "has_magma_cube": 0,
+        "slingshot_pull": 0.9
+      },
+      "model": "trapsntrickery:item/slingshot_pulling_2"
+    }
+  ]
+}

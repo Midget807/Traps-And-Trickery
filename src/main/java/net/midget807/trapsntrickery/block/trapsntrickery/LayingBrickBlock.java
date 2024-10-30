@@ -2,10 +2,7 @@ package net.midget807.trapsntrickery.block.trapsntrickery;
 
 import net.midget807.trapsntrickery.block.ModBlocks;
 import net.minecraft.advancement.criterion.Criteria;
-import net.minecraft.block.Block;
-import net.minecraft.block.BlockState;
-import net.minecraft.block.ShapeContext;
-import net.minecraft.block.Waterloggable;
+import net.minecraft.block.*;
 import net.minecraft.block.entity.BlockEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.fluid.FluidState;
@@ -20,6 +17,7 @@ import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.sound.SoundCategory;
 import net.minecraft.state.StateManager;
 import net.minecraft.state.property.BooleanProperty;
+import net.minecraft.state.property.DirectionProperty;
 import net.minecraft.state.property.IntProperty;
 import net.minecraft.state.property.Properties;
 import net.minecraft.util.ActionResult;
@@ -38,15 +36,16 @@ import org.jetbrains.annotations.Nullable;
 
 import java.util.List;
 
-public class LayingBrickBlock extends Block implements Waterloggable {
+public class LayingBrickBlock extends HorizontalFacingBlock implements Waterloggable {
     public static final VoxelShape ONE_BRICK = Block.createCuboidShape(0,0,0,16, 4, 16);
     public static final VoxelShape TWO_BRICK = Block.createCuboidShape(0,0,0,16, 4, 16);
     public static final VoxelShape THREE_BRICK = Block.createCuboidShape(0,0,0,16, 8, 16);
+    public static final DirectionProperty FACING = HorizontalFacingBlock.FACING;
     public static final IntProperty BRICKS = IntProperty.of("bricks", 1, 3);
     public static final BooleanProperty WATERLOGGED = Properties.WATERLOGGED;
     public LayingBrickBlock(Settings settings) {
         super(settings);
-        this.setDefaultState(this.getDefaultState().with(WATERLOGGED, false).with(BRICKS, 1));
+        this.setDefaultState(this.stateManager.getDefaultState().with(WATERLOGGED, false).with(BRICKS, 1).with(FACING, Direction.NORTH));
     }
 
     @Override
@@ -108,7 +107,7 @@ public class LayingBrickBlock extends Block implements Waterloggable {
 
     @Override
     protected void appendProperties(StateManager.Builder<Block, BlockState> builder) {
-        builder.add(BRICKS, WATERLOGGED);
+        builder.add(BRICKS, WATERLOGGED, FACING);
     }
     public static ActionResult placeBrickStack(PlayerEntity player, World world, Hand hand, BlockHitResult hitResult) {
         ItemStack stack = player.getStackInHand(hand);

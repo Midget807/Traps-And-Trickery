@@ -1,0 +1,9 @@
+{
+  "itemgroup.trapsntrickery.main": "Traps and Trickery",
+
+  "item.trapsntrickery.lens_reveal": "Revealing Lens",
+  "item.trapsntrickery.lens_reveal.desc": "Reveals trapped chests",
+  "item.trapsntrickery.slime_cube": "Slime",
+  "item.trapsntrickery.magma_cube": "Magma Cube",
+  "item.trapsntrickery.slingshot": "Slingshot"
+}

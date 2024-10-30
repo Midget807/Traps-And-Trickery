@@ -8,6 +8,8 @@ import net.midget807.trapsntrickery.block.ModBlocks;
 import net.midget807.trapsntrickery.entity.ModEntities;
 import net.midget807.trapsntrickery.gui.SpyglassTooltipComponent;
 import net.midget807.trapsntrickery.network.ModClientMessages;
+import net.midget807.trapsntrickery.render.ModModelPredicateProvider;
+import net.midget807.trapsntrickery.render.SlimeProjectileEntityRenderer;
 import net.minecraft.block.Block;
 import net.minecraft.client.item.ModelPredicateProviderRegistry;
 import net.minecraft.client.render.RenderLayer;
@@ -21,6 +23,7 @@ public class TrapsAndTrickeryClient implements ClientModInitializer {
 		TooltipComponentCallback.EVENT.register(SpyglassTooltipComponent::register);
 		BlockRenderLayerMap.INSTANCE.putBlocks(RenderLayer.getCutout(), ModBlocks.LAYING_BRICK);
 		ModClientMessages.registerS2CPackets();
-
+		ModModelPredicateProvider.registerModelPredicateProvider();
+		EntityRendererRegistry.register(ModEntities.SLIME_PROJECTILE_ENTITY_TYPE, SlimeProjectileEntityRenderer::new);
 	}
 }

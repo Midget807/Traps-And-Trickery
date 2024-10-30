@@ -16,6 +16,7 @@ import java.util.concurrent.CompletableFuture;
 
 public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
     public static final TagKey<Item> LENSES = registerItemTag("lenses");
+    public static final TagKey<Item> SLINGSHOT_PROJECTILES = registerItemTag("slingshot_projectiles");
     private static TagKey<Item> registerItemTag(String name) {
         return TagKey.of(RegistryKeys.ITEM, TrapsAndTrickeryMain.id(name));
     }
@@ -26,5 +27,9 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
     protected void configure(RegistryWrapper.WrapperLookup arg) {
         this.getOrCreateTagBuilder(LENSES)
                 .add(ModItems.REVEALING_LENS);
+
+        this.getOrCreateTagBuilder(SLINGSHOT_PROJECTILES)
+                .add(ModItems.SLIME_CUBE_ITEM)
+                .add(ModItems.MAGMA_CUBE_ITEM);
     }
 }

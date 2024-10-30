@@ -6,10 +6,16 @@ import net.fabricmc.fabric.api.datagen.v1.provider.FabricModelProvider;
 import net.midget807.trapsntrickery.TrapsAndTrickeryMain;
 import net.midget807.trapsntrickery.block.ModBlocks;
 import net.midget807.trapsntrickery.block.trapsntrickery.LayingBrickBlock;
+import net.midget807.trapsntrickery.item.ModItems;
 import net.minecraft.block.Block;
+import net.minecraft.block.HorizontalFacingBlock;
 import net.minecraft.data.client.*;
+import net.minecraft.item.Items;
+import net.minecraft.state.property.DirectionProperty;
+import net.minecraft.state.property.Properties;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.Util;
+import net.minecraft.util.math.Direction;
 import net.minecraft.util.math.random.Random;
 import net.minecraft.util.math.random.Xoroshiro128PlusPlusRandom;
 
@@ -23,14 +29,50 @@ public class ModModelProvider extends FabricModelProvider {
     @Override
     public void generateBlockStateModels(BlockStateModelGenerator blockStateModelGenerator) {
         blockStateModelGenerator.registerRod(ModBlocks.CRACKED_GLASS);
-        //this.registerLayingBrick(blockStateModelGenerator);
+        this.registerLayingBrick(blockStateModelGenerator);
     }
 
     @Override
     public void generateItemModels(ItemModelGenerator itemModelGenerator) {
-
+        itemModelGenerator.register(ModItems.REVEALING_LENS, Models.GENERATED);
+        itemModelGenerator.register(ModItems.SLINGSHOT, Models.GENERATED);
     }
-    private void registerLayingBrick(BlockStateModelGenerator generator) {
+    private void registerLayingBrick(BlockStateModelGenerator blockStateModelGenerator) {
+        blockStateModelGenerator.registerItemModel(Items.BRICK);
+        Identifier ONE_BRICK_MODEL = TrapsAndTrickeryMain.id("block/template_laying_brick_0_r0");
+        Identifier TWO_BRICK_MODEL = TrapsAndTrickeryMain.id("");
+        Identifier THREE_BRICK_MODEL = TrapsAndTrickeryMain.id("");
+        blockStateModelGenerator.blockStateCollector
+                .accept(VariantsBlockStateSupplier.create(ModBlocks.LAYING_BRICK)
+                        .coordinate(
+                                BlockStateVariantMap.create(LayingBrickBlock.BRICKS, Properties.WATERLOGGED, HorizontalFacingBlock.FACING)
+                                        .register(1, false, Direction.NORTH, BlockStateVariant.create().put(VariantSettings.Y, VariantSettings.Rotation.R270).put(VariantSettings.MODEL, ONE_BRICK_MODEL).put(VariantSettings.UVLOCK, true))
+                                        .register(1, false, Direction.EAST, BlockStateVariant.create().put(VariantSettings.Y, VariantSettings.Rotation.R0).put(VariantSettings.MODEL, ONE_BRICK_MODEL).put(VariantSettings.UVLOCK, true))
+                                        .register(1, false, Direction.SOUTH, BlockStateVariant.create().put(VariantSettings.Y, VariantSettings.Rotation.R90).put(VariantSettings.MODEL, ONE_BRICK_MODEL).put(VariantSettings.UVLOCK, true))
+                                        .register(1, false, Direction.WEST, BlockStateVariant.create().put(VariantSettings.Y, VariantSettings.Rotation.R180).put(VariantSettings.MODEL, ONE_BRICK_MODEL).put(VariantSettings.UVLOCK, true))
+                                        .register(2, false, Direction.NORTH, BlockStateVariant.create().put(VariantSettings.Y, VariantSettings.Rotation.R270).put(VariantSettings.MODEL, ONE_BRICK_MODEL).put(VariantSettings.UVLOCK, true))
+                                        .register(2, false, Direction.EAST, BlockStateVariant.create().put(VariantSettings.Y, VariantSettings.Rotation.R0).put(VariantSettings.MODEL, ONE_BRICK_MODEL).put(VariantSettings.UVLOCK, true))
+                                        .register(2, false, Direction.SOUTH, BlockStateVariant.create().put(VariantSettings.Y, VariantSettings.Rotation.R90).put(VariantSettings.MODEL, ONE_BRICK_MODEL).put(VariantSettings.UVLOCK, true))
+                                        .register(2, false, Direction.WEST, BlockStateVariant.create().put(VariantSettings.Y, VariantSettings.Rotation.R180).put(VariantSettings.MODEL, ONE_BRICK_MODEL).put(VariantSettings.UVLOCK, true))
+                                        .register(3, false, Direction.NORTH, BlockStateVariant.create().put(VariantSettings.Y, VariantSettings.Rotation.R270).put(VariantSettings.MODEL, ONE_BRICK_MODEL).put(VariantSettings.UVLOCK, true))
+                                        .register(3, false, Direction.EAST, BlockStateVariant.create().put(VariantSettings.Y, VariantSettings.Rotation.R0).put(VariantSettings.MODEL, ONE_BRICK_MODEL).put(VariantSettings.UVLOCK, true))
+                                        .register(3, false, Direction.SOUTH, BlockStateVariant.create().put(VariantSettings.Y, VariantSettings.Rotation.R90).put(VariantSettings.MODEL, ONE_BRICK_MODEL).put(VariantSettings.UVLOCK, true))
+                                        .register(3, false, Direction.WEST, BlockStateVariant.create().put(VariantSettings.Y, VariantSettings.Rotation.R180).put(VariantSettings.MODEL, ONE_BRICK_MODEL).put(VariantSettings.UVLOCK, true))
+                                        .register(1, true, Direction.NORTH, BlockStateVariant.create().put(VariantSettings.Y, VariantSettings.Rotation.R270).put(VariantSettings.MODEL, ONE_BRICK_MODEL).put(VariantSettings.UVLOCK, true))
+                                        .register(1, true, Direction.EAST, BlockStateVariant.create().put(VariantSettings.Y, VariantSettings.Rotation.R0).put(VariantSettings.MODEL, ONE_BRICK_MODEL).put(VariantSettings.UVLOCK, true))
+                                        .register(1, true, Direction.SOUTH, BlockStateVariant.create().put(VariantSettings.Y, VariantSettings.Rotation.R90).put(VariantSettings.MODEL, ONE_BRICK_MODEL).put(VariantSettings.UVLOCK, true))
+                                        .register(1, true, Direction.WEST, BlockStateVariant.create().put(VariantSettings.Y, VariantSettings.Rotation.R180).put(VariantSettings.MODEL, ONE_BRICK_MODEL).put(VariantSettings.UVLOCK, true))
+                                        .register(2, true, Direction.NORTH, BlockStateVariant.create().put(VariantSettings.Y, VariantSettings.Rotation.R270).put(VariantSettings.MODEL, ONE_BRICK_MODEL).put(VariantSettings.UVLOCK, true))
+                                        .register(2, true, Direction.EAST, BlockStateVariant.create().put(VariantSettings.Y, VariantSettings.Rotation.R0).put(VariantSettings.MODEL, ONE_BRICK_MODEL).put(VariantSettings.UVLOCK, true))
+                                        .register(2, true, Direction.SOUTH, BlockStateVariant.create().put(VariantSettings.Y, VariantSettings.Rotation.R90).put(VariantSettings.MODEL, ONE_BRICK_MODEL).put(VariantSettings.UVLOCK, true))
+                                        .register(2, true, Direction.WEST, BlockStateVariant.create().put(VariantSettings.Y, VariantSettings.Rotation.R180).put(VariantSettings.MODEL, ONE_BRICK_MODEL).put(VariantSettings.UVLOCK, true))
+                                        .register(3, true, Direction.NORTH, BlockStateVariant.create().put(VariantSettings.Y, VariantSettings.Rotation.R270).put(VariantSettings.MODEL, ONE_BRICK_MODEL).put(VariantSettings.UVLOCK, true))
+                                        .register(3, true, Direction.EAST, BlockStateVariant.create().put(VariantSettings.Y, VariantSettings.Rotation.R0).put(VariantSettings.MODEL, ONE_BRICK_MODEL).put(VariantSettings.UVLOCK, true))
+                                        .register(3, true, Direction.SOUTH, BlockStateVariant.create().put(VariantSettings.Y, VariantSettings.Rotation.R90).put(VariantSettings.MODEL, ONE_BRICK_MODEL).put(VariantSettings.UVLOCK, true))
+                                        .register(3, true, Direction.WEST, BlockStateVariant.create().put(VariantSettings.Y, VariantSettings.Rotation.R180).put(VariantSettings.MODEL, ONE_BRICK_MODEL).put(VariantSettings.UVLOCK, true))
+                        ));
+    }
+    private void registerLayingBrick2(BlockStateModelGenerator generator) {
         TextureKey textureKey = TextureKey.of("brick");
         int height = 3;
         int rotation = 4;
