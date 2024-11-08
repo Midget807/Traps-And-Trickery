@@ -1,0 +1,55 @@
+{
+  "variants": {
+    "bricks=1": [
+      {
+        "model": "trapsntrickery:block/template_laying_brick_0"
+      },
+      {
+        "model": "trapsntrickery:block/template_laying_brick_0",
+        "y": 90
+      },
+      {
+        "model": "trapsntrickery:block/template_laying_brick_0",
+        "y": 180
+      },
+      {
+        "model": "trapsntrickery:block/template_laying_brick_0",
+        "y": 270
+      }
+    ],
+    "bricks=2": [
+      {
+        "model": "trapsntrickery:block/template_laying_brick_1"
+      },
+      {
+        "model": "trapsntrickery:block/template_laying_brick_1",
+        "y": 90
+      },
+      {
+        "model": "trapsntrickery:block/template_laying_brick_1",
+        "y": 180
+      },
+      {
+        "model": "trapsntrickery:block/template_laying_brick_1",
+        "y": 270
+      }
+    ],
+    "bricks=3": [
+      {
+        "model": "trapsntrickery:block/template_laying_brick_2"
+      },
+      {
+        "model": "trapsntrickery:block/template_laying_brick_2",
+        "y": 90
+      },
+      {
+        "model": "trapsntrickery:block/template_laying_brick_2",
+        "y": 180
+      },
+      {
+        "model": "trapsntrickery:block/template_laying_brick_2",
+        "y": 270
+      }
+    ]
+  }
+}

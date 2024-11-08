@@ -1,0 +1,14 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "minecraft:item/spyglass"
+  },
+  "overrides": [
+    {
+      "predicate": {
+        "lens_type": 1.0
+      },
+      "model": "trapsntrickery:item/spyglass_handheld_reveal"
+    }
+  ]
+}

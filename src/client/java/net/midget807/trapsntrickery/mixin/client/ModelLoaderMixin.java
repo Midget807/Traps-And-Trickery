@@ -23,7 +23,7 @@ public abstract class ModelLoaderMixin {
     @Inject(method = "<init>", at = @At(value = "INVOKE", target = "Lnet/minecraft/client/render/model/ModelLoader;addModel(Lnet/minecraft/client/util/ModelIdentifier;)V", ordinal = 3, shift = At.Shift.AFTER))
     public void trapsntrickery$addNewModels(BlockColors blockColors, Profiler profiler, Map<Identifier, JsonUnbakedModel> jsonUnbakedModels, Map<Identifier, List<ModelLoader.SourceTrackedData>> blockStates, CallbackInfo ci) {
         this.addModel(new ModelIdentifier(TrapsAndTrickeryMain.MOD_ID, "template_slingshot", "inventory"));
-        this.addModel(new ModelIdentifier(TrapsAndTrickeryMain.MOD_ID, "slingshot_handheld", "inventory"));
+        this.addModel(new ModelIdentifier(TrapsAndTrickeryMain.MOD_ID, "slingshot_gui", "inventory"));
         this.addModel(new ModelIdentifier(TrapsAndTrickeryMain.MOD_ID, "slingshot_pulling_0_m", "inventory"));
         this.addModel(new ModelIdentifier(TrapsAndTrickeryMain.MOD_ID, "slingshot_pulling_1_m", "inventory"));
         this.addModel(new ModelIdentifier(TrapsAndTrickeryMain.MOD_ID, "slingshot_pulling_2_m", "inventory"));

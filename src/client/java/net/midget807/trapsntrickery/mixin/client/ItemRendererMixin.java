@@ -12,6 +12,7 @@ import net.minecraft.client.util.math.MatrixStack;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
+import net.minecraft.item.Items;
 import net.minecraft.world.World;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Unique;
@@ -32,14 +33,11 @@ public class ItemRendererMixin {
     }
     @ModifyVariable(method = "renderItem(Lnet/minecraft/item/ItemStack;Lnet/minecraft/client/render/model/json/ModelTransformationMode;ZLnet/minecraft/client/util/math/MatrixStack;Lnet/minecraft/client/render/VertexConsumerProvider;IILnet/minecraft/client/render/model/BakedModel;)V", at = @At("HEAD"), argsOnly = true)
     public BakedModel trapsntrickery$customModel(BakedModel value, ItemStack stack, ModelTransformationMode renderMode, boolean leftHanded, MatrixStack matrices, VertexConsumerProvider vertexConsumer, int light, int overlay, BakedModel model) {
-        if (stack.isOf(ModItems.SLINGSHOT) && (renderMode != ModelTransformationMode.GUI) && (renderMode != ModelTransformationMode.GROUND)) {
-            boolean pulling = entity != null && entity.isUsingItem() && entity.getActiveItem() == stack ? true : false;
-            float pull = entity.getActiveItem() != stack ? 0.0f : (stack.getMaxUseTime() - entity.getItemUseTimeLeft()) / 20.0f;
-            if (pulling) {
-                return ((ItemRendererAccessor) this).trapsntrickery$getModels().getModelManager().getModel(new ModelIdentifier(TrapsAndTrickeryMain.MOD_ID, "slingshot_handheld", "inventory"));
-            } else {
-                return ((ItemRendererAccessor) this).trapsntrickery$getModels().getModelManager().getModel(new ModelIdentifier(TrapsAndTrickeryMain.MOD_ID, "slingshot_handheld", "inventory"));
-            }
+        if (stack.isOf(ModItems.SLINGSHOT) && renderMode == ModelTransformationMode.GUI) {
+            ((ItemRendererAccessor) this).trapsntrickery$getModels().getModelManager().getModel(new ModelIdentifier(TrapsAndTrickeryMain.MOD_ID, "slingshot_gui", "inventory"));
+        }
+        if (stack.isOf(ModItems.SLINGSHOT) && renderMode == ModelTransformationMode.GROUND) {
+            ((ItemRendererAccessor) this).trapsntrickery$getModels().getModelManager().getModel(new ModelIdentifier(TrapsAndTrickeryMain.MOD_ID, "slingshot_gui", "inventory"));
         }
         return value;
     }

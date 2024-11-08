@@ -29,13 +29,13 @@ public class ModModelProvider extends FabricModelProvider {
     @Override
     public void generateBlockStateModels(BlockStateModelGenerator blockStateModelGenerator) {
         blockStateModelGenerator.registerRod(ModBlocks.CRACKED_GLASS);
-        this.registerLayingBrick(blockStateModelGenerator);
+        //this.registerLayingBrick(blockStateModelGenerator);
     }
 
     @Override
     public void generateItemModels(ItemModelGenerator itemModelGenerator) {
         itemModelGenerator.register(ModItems.REVEALING_LENS, Models.GENERATED);
-        itemModelGenerator.register(ModItems.SLINGSHOT, Models.GENERATED);
+        //itemModelGenerator.register(ModItems.SLINGSHOT, Models.GENERATED);
     }
     private void registerLayingBrick(BlockStateModelGenerator blockStateModelGenerator) {
         blockStateModelGenerator.registerItemModel(Items.BRICK);

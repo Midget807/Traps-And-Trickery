@@ -1,6 +1,0 @@
-{
-  "parent": "trapsntrickery:block/template_laying_brick_0_r0",
-  "textures": {
-    "book": "trapsntrickery:block/laying_brick_0"
-  }
-}

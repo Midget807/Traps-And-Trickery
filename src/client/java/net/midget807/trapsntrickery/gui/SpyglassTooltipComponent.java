@@ -15,7 +15,7 @@ import org.jetbrains.annotations.Nullable;
 
 @Environment(EnvType.CLIENT)
 public class SpyglassTooltipComponent implements TooltipComponent {
-    private static final Identifier BACKGROUND_TEXTURE = new Identifier("container/bundle/background");
+    private static final Identifier BACKGROUND_TEXTURE = new Identifier("trapsntrickery","container/spyglass/background");
     private static final int CELL_WIDTH = 18;
     private static final int CELL_HEIGHT = 18;
     private final DefaultedList<ItemStack> inventory;
@@ -35,7 +35,7 @@ public class SpyglassTooltipComponent implements TooltipComponent {
     @Override
     public void drawItems(TextRenderer textRenderer, int x, int y, DrawContext context) {
         context.drawGuiTexture(BACKGROUND_TEXTURE, x, y, CELL_WIDTH, CELL_HEIGHT);
-        this.drawSlot(x, y - 1, 0, context, textRenderer);
+        this.drawSlot(x, y - 2, 0, context, textRenderer);
     }
 
     private void drawSlot(int x, int y, int index, DrawContext context, TextRenderer textRenderer) {
@@ -59,7 +59,7 @@ public class SpyglassTooltipComponent implements TooltipComponent {
     @Environment(EnvType.CLIENT)
     static enum Sprite {
         BLOCKED_SLOT(new Identifier("container/bundle/blocked_slot"), 18, 20),
-        SLOT(new Identifier("container/bundle/slot"), 18, 20);
+        SLOT(new Identifier("trapsntrickery","container/spyglass/slot"), 18, 20);
 
         public final Identifier texture;
         public final int width;
