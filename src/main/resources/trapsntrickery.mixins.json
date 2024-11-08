@@ -6,7 +6,8 @@
     "ItemEntityMixin",
     "ItemMixin",
     "SlimeEntityMixin",
-    "SpyglassItemMixin"
+    "SpyglassItemMixin",
+    "TntBlockMixin"
   ],
   "injectors": {
     "defaultRequire": 1
